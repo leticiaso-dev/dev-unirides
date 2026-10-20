@@ -1,2 +1,2 @@
 # dev-uniride
-Sistema web responsivo para compartilhamento caronas entre estudantes universitários.
+Sistema web responsivo para compartilhamento de caronas entre estudantes universitários.
