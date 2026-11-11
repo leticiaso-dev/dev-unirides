@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101C35">
+  <title>UniRides | Login</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #101C35;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      background: #fff;
+      border-radius: 25px;
+      padding: 40px 30px;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .logo-icon {
+      width: 75px;
+      height: 75px;
+      background: #E8F8F3;
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      font-size: 38px;
+    }
+
+    .logo h1 {
+      font-size: 32px;
+      color: #101C35;
+      font-weight: 800;
+    }
+
+    .logo h1 span {
+      color: #19B98A;
+    }
+
+    .logo p {
+      color: #7A8495;
+      font-size: 14px;
+      margin-top: 7px;
+    }
+
+    .welcome {
+      margin-bottom: 25px;
+    }
+
+    .welcome h2 {
+      font-size: 23px;
+      color: #101C35;
+      margin-bottom: 8px;
+    }
+
+    .welcome p {
+      font-size: 14px;
+      color: #8490A2;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: #26344D;
+      margin-bottom: 9px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #DDE3EB;
+      border-radius: 12px;
+      font-size: 15px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: #19B98A;
+      box-shadow: 0 0 0 3px rgba(25,185,138,0.1);
+    }
+
+    .password-box {
+      position: relative;
+    }
+
+    .password-box input {
+      padding-right: 55px;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .forgot {
+      display: block;
+      text-align: right;
+      color: #19B98A;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: -8px;
+      margin-bottom: 25px;
+    }
+
+    .btn-login {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 12px;
+      background: #19B98A;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-login:hover {
+      background: #119B73;
+      transform: translateY(-2px);
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 25px 0;
+      color: #A0A8B5;
+      font-size: 13px;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #E5E9EF;
+    }
+
+    .btn-google {
+      width: 100%;
+      padding: 14px;
+      background: white;
+      border: 1px solid #DDE3EB;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #26344D;
+      cursor: pointer;
+    }
+
+    .btn-google:hover {
+      background: #F7F9FC;
+    }
+
+    .register {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 14px;
+      color: #8490A2;
+    }
+
+    .register a {
+      color: #19B98A;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .footer {
+      text-align: center;
+      color: #A0A8B5;
+      font-size: 11px;
+      margin-top: 25px;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 12px;
+      }
+
+      .container {
+        padding: 32px 23px;
+        border-radius: 20px;
+      }
+
+      .logo h1 {
+        font-size: 29px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header class="logo">
+      <div class="logo-icon">🚗</div>
+      <h1>Uni<span>Rides</span></h1>
+      <p>Compartilhe a trajetória.</p>
+    </header>
+
+    <section class="welcome">
+      <h2>Bem-vindo de volta!</h2>
+      <p>Entre na sua conta e continue sua jornada.</p>
+    </section>
+
+    <form id="loginForm">
+
+      <div class="input-group">
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="seuemail@exemplo.com"
+          autocomplete="email"
+          required
+        >
+      </div>
+
+      <div class="input-group">
+        <label for="password">Senha</label>
+
+        <div class="password-box">
+          <input
+            type="password"
+            id="password"
+            placeholder="Digite sua senha"
+            autocomplete="current-password"
+            required
+          >
+
+          <button
+            type="button"
+            class="toggle-password"
+            onclick="togglePassword()"
+            aria-label="Mostrar senha"
+          >👁️</button>
+        </div>
+      </div>
+
+      <a href="#" class="forgot">Esqueceu sua senha?</a>
+
+      <button type="submit" class="btn-login">
+        Entrar
+      </button>
+
+    </form>
+
+    <div class="divider">ou continue com</div>
+
+    <button type="button" class="btn-google">
+      🌐 Entrar com Google
+    </button>
+
+    <div class="register">
+      Ainda não tem uma conta?
+      <a href="#">Criar conta</a>
+    </div>
+
+    <footer class="footer">
+      © 2026 UniRides. Todos os direitos reservados.
+    </footer>
+
+  </main>
+
+  <script>
+    function togglePassword() {
+      const password = document.getElementById("password");
+      const button = document.querySelector(".toggle-password");
+
+      if (password.type === "password") {
+        password.type = "text";
+        button.textContent = "🙈";
+        button.setAttribute("aria-label", "Ocultar senha");
+      } else {
+        password.type = "password";
+        button.textContent = "👁️";
+        button.setAttribute("aria-label", "Mostrar senha");
+      }
+    }
+
+    document.getElementById("loginForm")
+      .addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Interface de login criada! Conecte ao sistema de autenticação.");
+      });
+  </script>
+
+</body>
+</html>
