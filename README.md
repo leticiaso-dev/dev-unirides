@@ -7,7 +7,7 @@ Sistema web responsivo para compartilhamento de caronas entre estudantes univers
 |------|--------|
 | André Silva |  |
 | Leonardo  |  |
-| Leticia Sá oliveira | Protótipo e código HTML |
+| Leticia Sá Oliveira | Protótipo e código HTML |
 | Lucas | |
 | Lucas Santos | |
 | Thamires | |
