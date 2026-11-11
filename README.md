@@ -3,7 +3,7 @@
 Sistema web responsivo para compartilhamento de caronas entre estudantes universitários.
 ## ⚙️Protótipo para validar navegação do produto proposto
 ## </> Página HTML
-## 👥 Equipe de desenvolvimento
+##  Equipe de desenvolvimento
 
 | Nome | Função |
 |------|--------|
