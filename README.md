@@ -1,7 +1,14 @@
 # Projeto Integrador: Análise e Soluções Integradas para Organizações (2ª Entrega)
 # Aplicativo UniRides
 Sistema web responsivo para compartilhamento de caronas entre estudantes universitários.
-👥# Equipe de Desenvolvimento
-Nome	Função
-Leticia Sá oliveira	Protótipo e documentação
+## 👥 Equipe de desenvolvimento
+
+| Nome | Função |
+|------|--------|
+| André Silva |  |
+| Leonardo  |  |
+| Leticia Sá oliveira | Protótipo e código HTML |
+| Lucas | |
+| Lucas Santos | |
+| Thamires | |
 
