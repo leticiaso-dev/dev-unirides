@@ -4,7 +4,7 @@ Sistema web responsivo para compartilhamento de caronas entre estudantes univers
 ## ⚙️Protótipo para validar navegação do produto proposto
 O protótipo foi desenvolvido na aplicação Miro e pode ser acessado pelo link:https://github.com/leticiaso-dev/dev-unirides/blob/main/UniRides.jpg
 
-## </> Página HTML
+## </> Página 
 ##  Equipe de desenvolvimento
 
 | Nome | Função |
