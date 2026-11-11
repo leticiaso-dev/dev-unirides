@@ -1,8 +1,8 @@
 # Projeto Integrador: Análise e Soluções Integradas para Organizações (2ª Entrega)
 # Aplicativo UniRides
 Sistema web responsivo para compartilhamento de caronas entre estudantes universitários.
-## Protótipo para validar navegação do produto proposto
-## Página HTML
+## ⚙️Protótipo para validar navegação do produto proposto
+## </> Página HTML
 ## 👥 Equipe de desenvolvimento
 
 | Nome | Função |
