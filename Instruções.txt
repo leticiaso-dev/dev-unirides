@@ -1,0 +1,48 @@
+1. **Copiar a pasta `uniride`.
+
+2. **Abrir a pasta `htdocs` do XAMPP.** C:\xampp\htdocs
+
+3. **Testar.** Com o **Apache** e o **MySQL** ligados no XAMPP Control Panel, acesse no navegador:
+   ```
+   http://localhost/uniride/backend/api/auth/eu.php
+   ```
+   Vai aparecer `{"erro":"Faça login para continuar."}`, está tudo certo.
+
+
+
+## Parte 1: importar o banco de dados
+
+1. Abrir o **XAMPP Control Panel**.
+2. No navegador, acesse **http://localhost/phpmyadmin**.
+3. No menu de cima, clique na aba **Importar**.
+4. Clique em **Escolher arquivo** e selecione `C:\xampp\htdocs\uniride\database\uniride.sql`.
+
+## Parte 2: rodar o React
+
+** instale o **Node.js**. Baixe em **https://nodejs.org/pt-br**.
+
+1. Abra o **Prompt de Comando**.
+   ```
+2. Entre na pasta do front-end:
+   ```
+   cd C:\xampp\htdocs\uniride\frontend
+   ```
+3. Instale as bibliotecas do projeto.
+   ```
+   npm install
+   ```
+4. Inicie o React:
+   ```
+   npm run dev
+   ```
+5. Abra **http://localhost:5173** no navegador e entre com `lucas@senacsp.edu.br`, senha `123456`.
+
+**Importante:** deixe essa janela do Prompt de Comando **aberta** enquanto usa o site.
+
+## Nas próximas vezes
+
+Não precisa importar o banco nem rodar `npm install` de novo. Basta:
+1. ligar Apache e MySQL no XAMPP;
+2. no Prompt de Comando, rodar `cd C:\xampp\htdocs\uniride\frontend` e depois `npm run dev`;
+3. abrir **http://localhost:5173**.
+
