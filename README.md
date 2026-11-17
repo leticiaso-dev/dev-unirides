@@ -9,7 +9,7 @@ O protótipo foi desenvolvido na aplicação Miro e pode ser acessado pelo link:
 
 | Nome | Função |
 |------|--------|
-| André Silva |  |
+| André Silva | Protótipo e banco SQL |
 | Leonardo  |  |
 | Leticia Sá Oliveira | Protótipo e código HTML |
 | Lucas | |
