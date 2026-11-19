@@ -1,0 +1,245 @@
+/* ================= UniRide - Estilos =================
+   Visual baseado no protótipo: verde-esmeralda, fundo menta,
+   cabeçalho com mapa e painéis arredondados (layout de celular). */
+
+:root {
+  --verde: #12a88e;          /* botões e destaques */
+  --verde-escuro: #0f5c4f;   /* textos fortes e ponto de destino */
+  --menta: #d3ece4;          /* fundo do mapa */
+  --menta-claro: #e8f5f0;    /* quarteirões do mapa e fundos suaves */
+  --campo: #f0f3f2;          /* fundo dos campos */
+  --borda: #dfe5e3;
+  --texto: #17302b;
+  --texto-suave: #6b7d78;
+  --branco: #ffffff;
+  --vermelho: #d64545;
+  --vermelho-claro: #fdecec;
+  --amarelo-claro: #fff5dc;
+  --raio: 16px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #eceeed;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--texto);
+  font-size: 15px;
+  line-height: 1.45;
+}
+a { color: var(--verde); text-decoration: none; font-weight: 600; }
+h1, h2, h3 { margin: 0 0 .4rem; color: var(--texto); }
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.2rem; }
+h3 { font-size: 1rem; }
+p { margin: 0 0 .6rem; }
+
+/* Coluna do aplicativo (largura de celular) */
+.tela {
+  max-width: 430px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #f6faf8;
+  position: relative;
+  padding-bottom: 80px;      /* espaço para o menu inferior */
+  box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+}
+.tela.sem-menu { padding-bottom: 24px; }
+
+/* ---------- Mapa do topo ---------- */
+.mapa { position: relative; background: var(--menta); }
+.mapa svg { display: block; width: 100%; height: auto; }
+.voltar {
+  position: absolute; top: 18px; left: 18px; width: 40px; height: 40px; border-radius: 50%;
+  background: var(--branco); border: none; font-size: 1.3rem; font-weight: 700; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .12); color: var(--texto);
+}
+
+/* Painel branco que "sobe" sobre o mapa */
+.painel {
+  background: var(--branco);
+  border-radius: 24px 24px 0 0;
+  margin-top: -28px;
+  position: relative;
+  padding: 24px 22px 8px;
+  min-height: 200px;
+}
+.conteudo { padding: 18px 18px 8px; }
+
+/* ---------- Logo ---------- */
+.logo-circulo {
+  width: 76px; height: 76px; border-radius: 50%; background: var(--menta-claro);
+  border: 3px solid var(--branco); box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+  display: flex; align-items: center; justify-content: center; margin: -62px auto 8px;
+}
+.marca { text-align: center; margin-bottom: 14px; }
+.marca h1 { font-size: 1.6rem; margin: 0; }
+.marca p { color: var(--texto-suave); font-size: .85rem; margin: 0; }
+.titulo-centro { text-align: center; margin-bottom: 16px; }
+.titulo-centro h2 { margin: 0; }
+.titulo-centro p { color: var(--texto-suave); font-size: .9rem; margin: 0; }
+
+/* ---------- Campos ---------- */
+.campo { margin-bottom: 12px; }
+.campo label { display: block; font-weight: 700; font-size: .85rem; margin-bottom: 5px; }
+input, select, textarea {
+  width: 100%; font: inherit; color: var(--texto);
+  background: var(--campo); border: 1.5px solid var(--borda); border-radius: 12px;
+  padding: 12px 14px;
+}
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--verde); background: var(--branco); }
+textarea { min-height: 80px; resize: vertical; }
+.linha-campos { display: flex; gap: 10px; }
+.linha-campos > * { flex: 1; }
+
+/* Campo com ícone ou ponto colorido na frente (origem/destino) */
+.campo-icone { position: relative; margin-bottom: 12px; }
+.campo-icone input { padding-left: 42px; }
+.campo-icone .icone {
+  position: absolute; left: 14px; top: 50%; transform: translateY(-50%); font-size: 1rem; color: var(--texto-suave);
+}
+.ponto-origem, .ponto-destino {
+  position: absolute; left: 17px; top: 50%; transform: translateY(-50%);
+  width: 11px; height: 11px; border-radius: 50%;
+}
+.ponto-origem { background: var(--verde); }
+.ponto-destino { background: var(--verde-escuro); }
+
+.check { display: flex; gap: 8px; align-items: flex-start; font-size: .9rem; margin: 6px 0 14px; }
+.check input { width: auto; margin-top: 3px; }
+
+/* ---------- Botões ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  font: inherit; font-weight: 700; border: none; border-radius: 12px; cursor: pointer;
+  padding: 13px 18px; background: var(--verde); color: var(--branco);
+}
+.btn:hover { background: #0e957e; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn.bloco { width: 100%; padding: 15px; font-size: 1rem; }
+.btn.contorno { background: var(--branco); color: var(--texto); border: 1.5px solid var(--borda); }
+.btn.contorno:hover { border-color: var(--verde); }
+.btn.vermelho { background: var(--vermelho); }
+.btn.contorno.vermelho { background: var(--branco); color: var(--vermelho); border-color: #f0c4c4; }
+.btn.pequeno { padding: 7px 12px; font-size: .85rem; border-radius: 10px; }
+.acoes { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+/* Seletor "Agora / Agendar" */
+.alternar { display: flex; gap: 10px; margin-bottom: 14px; }
+.alternar button {
+  flex: 1; font: inherit; font-weight: 700; padding: 12px; border-radius: 12px; cursor: pointer;
+  background: var(--branco); border: 1.5px solid var(--borda); color: var(--texto);
+}
+.alternar button.ativo { background: var(--verde); border-color: var(--verde); color: var(--branco); }
+
+/* Contador de lugares ( − 1 + ) */
+.contador { display: flex; align-items: center; justify-content: space-between; margin: 6px 0 18px; }
+.contador b { font-size: .9rem; }
+.contador .controles { display: flex; align-items: center; gap: 16px; }
+.contador button {
+  width: 34px; height: 34px; border-radius: 50%; font-size: 1.2rem; font-weight: 700; cursor: pointer;
+  border: 1.5px solid var(--borda); background: var(--branco); color: var(--verde);
+}
+.contador button.mais { background: var(--verde); border-color: var(--verde); color: var(--branco); }
+.contador span { font-weight: 700; font-size: 1.1rem; min-width: 14px; text-align: center; }
+
+/* ---------- Mensagens ---------- */
+.alerta { padding: 10px 12px; border-radius: 12px; margin-bottom: 12px; font-size: .9rem; }
+.alerta.erro { background: var(--vermelho-claro); color: #8f1f1f; }
+.alerta.sucesso { background: var(--menta-claro); color: var(--verde-escuro); font-weight: 600; }
+.alerta.info { background: var(--campo); color: var(--texto-suave); font-size: .8rem; }
+.alerta.aviso { background: var(--amarelo-claro); color: #7a4d00; }
+.dica { color: var(--texto-suave); font-size: .85rem; }
+.centro { text-align: center; }
+
+/* ---------- Cartões ---------- */
+.cartao {
+  background: var(--branco); border: 1.5px solid var(--borda); border-radius: var(--raio);
+  padding: 14px; margin-bottom: 12px;
+}
+.cartao h3 { margin-bottom: 8px; }
+.secao-titulo { font-weight: 800; font-size: 1.05rem; margin: 18px 0 10px; }
+
+/* Indicadores do painel */
+.indicadores { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+.indicador { background: var(--menta-claro); border-radius: 14px; padding: 12px; }
+.indicador b { display: block; font-size: 1.4rem; color: var(--verde-escuro); }
+.indicador span { font-size: .8rem; color: var(--texto-suave); }
+
+/* Atalhos grandes do painel */
+.atalhos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 6px; }
+.atalho {
+  background: var(--verde); color: var(--branco); border-radius: 16px; padding: 16px 14px; font-weight: 700;
+}
+.atalho.claro { background: var(--branco); color: var(--texto); border: 1.5px solid var(--borda); }
+.atalho .emoji { font-size: 1.6rem; display: block; margin-bottom: 6px; }
+.atalho small { display: block; font-weight: 400; font-size: .78rem; opacity: .9; }
+
+/* Cartão de carona (rota com dois pontos) */
+.rota { display: flex; flex-direction: column; gap: 2px; }
+.rota .ponto { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: .92rem; }
+.rota .ponto::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--verde); flex-shrink: 0; }
+.rota .ponto.fim::before { background: var(--verde-escuro); }
+.rota .traco { border-left: 2px dashed var(--verde); height: 12px; margin-left: 4px; }
+.meta { display: flex; flex-wrap: wrap; gap: 4px 12px; color: var(--texto-suave); font-size: .82rem; margin-top: 8px; }
+.meta b { color: var(--texto); }
+.rodape-cartao { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--borda); }
+.preco b { font-size: 1.25rem; color: var(--verde); }
+.preco span { font-size: .75rem; color: var(--texto-suave); display: block; }
+.estrelas { color: #f5a623; }
+
+/* Etiquetas de status */
+.etiqueta { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: .7rem; font-weight: 800; text-transform: uppercase; }
+.etiqueta.ABERTA, .etiqueta.ACEITA { background: var(--menta-claro); color: var(--verde-escuro); }
+.etiqueta.PENDENTE { background: var(--amarelo-claro); color: #8a5a00; }
+.etiqueta.RECUSADA, .etiqueta.CANCELADA { background: var(--vermelho-claro); color: #9b2626; }
+.etiqueta.CONCLUIDA { background: #e6ecf7; color: #2d4a8a; }
+
+/* Lista de pessoas */
+.pessoa { display: flex; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--borda); }
+.pessoa:last-child { border-bottom: none; }
+.pessoa .info { flex: 1; font-size: .9rem; }
+.pessoa .info small { display: block; color: var(--texto-suave); font-size: .78rem; }
+.avatar {
+  width: 40px; height: 40px; border-radius: 50%; background: var(--menta); color: var(--verde-escuro);
+  display: inline-flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;
+}
+.avatar.grande { width: 68px; height: 68px; font-size: 1.5rem; }
+
+/* Divisão do custo */
+.rateio { background: var(--menta-claro); border-radius: 14px; padding: 12px 14px; }
+.rateio .linha { display: flex; justify-content: space-between; font-size: .88rem; padding: 2px 0; }
+.rateio .total { border-top: 1px solid #bfe0d5; margin-top: 6px; padding-top: 6px; font-weight: 800; font-size: 1rem; }
+.rateio .total span:last-child { color: var(--verde); }
+
+/* Abas (Minhas caronas) */
+.abas { display: flex; background: var(--campo); border-radius: 12px; padding: 4px; margin-bottom: 14px; }
+.abas button {
+  flex: 1; font: inherit; font-weight: 700; border: none; background: none; padding: 10px; border-radius: 10px;
+  cursor: pointer; color: var(--texto-suave);
+}
+.abas button.ativo { background: var(--branco); color: var(--verde-escuro); box-shadow: 0 1px 4px rgba(0, 0, 0, .08); }
+
+table { width: 100%; border-collapse: collapse; font-size: .85rem; margin-bottom: 8px; }
+th, td { text-align: left; padding: 6px 4px; border-bottom: 1px solid var(--borda); }
+th { color: var(--texto-suave); font-size: .75rem; }
+
+.vazio { text-align: center; color: var(--texto-suave); padding: 16px 8px; }
+.vazio .emoji { font-size: 2rem; }
+
+/* ---------- Menu inferior ---------- */
+.menu-inferior {
+  position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 100%; max-width: 430px; background: var(--branco); border-top: 1px solid var(--borda);
+  display: flex; justify-content: space-around; padding: 8px 4px 10px; z-index: 10;
+}
+.menu-inferior a {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  color: var(--texto-suave); font-size: .7rem; font-weight: 600; padding: 4px 6px; border-radius: 10px;
+}
+.menu-inferior a .emoji { font-size: 1.25rem; }
+.menu-inferior a.active { color: var(--verde-escuro); background: var(--menta-claro); }
+
+/* Topo das telas internas sem mapa */
+.topo-simples { display: flex; justify-content: space-between; align-items: center; padding: 18px 18px 0; }
+.topo-simples .sair { background: none; border: none; color: var(--texto-suave); font: inherit; font-weight: 600; cursor: pointer; }

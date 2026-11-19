@@ -1,0 +1,72 @@
+erDiagram
+    USUARIOS ||--o{ VEICULOS : "possui"
+    USUARIOS ||--o{ CARONAS : "oferece (motorista)"
+    VEICULOS ||--o{ CARONAS : "é usado em"
+    CARONAS ||--o{ SOLICITACOES : "recebe"
+    USUARIOS ||--o{ SOLICITACOES : "solicita (passageiro)"
+    CARONAS ||--o{ AVALIACOES : "gera"
+    USUARIOS ||--o{ AVALIACOES : "avalia / é avaliado"
+    CARONAS |o--o{ DENUNCIAS : "origina"
+    USUARIOS ||--o{ DENUNCIAS : "denuncia / é denunciado"
+
+    USUARIOS {
+        INT id PK
+        VARCHAR(100) nome
+        VARCHAR(100) email UK "institucional"
+        VARCHAR(255) senha "password_hash"
+        ENUM vinculo "ALUNO, PROFESSOR, FUNCIONARIO"
+        VARCHAR(100) curso_setor
+        VARCHAR(20) telefone
+        DATETIME criado_em
+    }
+    VEICULOS {
+        INT id PK
+        INT usuario_id FK
+        VARCHAR(60) modelo
+        VARCHAR(30) cor
+        VARCHAR(10) placa UK
+        DECIMAL(4-1) consumo "km/l"
+        INT lugares
+    }
+    CARONAS {
+        INT id PK
+        INT motorista_id FK
+        INT veiculo_id FK
+        VARCHAR(150) origem
+        VARCHAR(150) destino
+        DATETIME data_hora
+        DECIMAL(5-1) distancia "km"
+        DECIMAL(5-2) preco_combustivel
+        INT vagas
+        VARCHAR(255) observacoes
+        ENUM status "ABERTA, CONCLUIDA, CANCELADA"
+        DATETIME criado_em
+    }
+    SOLICITACOES {
+        INT id PK
+        INT carona_id FK
+        INT passageiro_id FK
+        VARCHAR(150) ponto_embarque
+        VARCHAR(255) mensagem
+        ENUM status "PENDENTE, ACEITA, RECUSADA, CANCELADA"
+        DATETIME criado_em
+    }
+    AVALIACOES {
+        INT id PK
+        INT carona_id FK
+        INT avaliador_id FK
+        INT avaliado_id FK
+        INT nota "1 a 5"
+        VARCHAR(255) comentario
+        DATETIME criado_em
+    }
+    DENUNCIAS {
+        INT id PK
+        INT carona_id FK
+        INT denunciante_id FK
+        INT denunciado_id FK
+        VARCHAR(60) motivo
+        TEXT descricao
+        ENUM status "ABERTA, EM_ANALISE, RESOLVIDA"
+        DATETIME criado_em
+    }

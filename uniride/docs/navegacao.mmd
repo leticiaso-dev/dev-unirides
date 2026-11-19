@@ -1,0 +1,20 @@
+flowchart TB
+    I["Página inicial"] --> C["Cadastro<br/>(e-mail institucional)"]
+    I --> L["Login"]
+    C --> P
+    L --> P["Painel (Início)"]
+    P --> B["Buscar carona"]
+    P --> O["Oferecer carona"]
+    P --> M["Minhas caronas"]
+    P --> PF["Meu perfil<br/>+ veículos"]
+    O -. "sem veículo" .-> PF
+    B --> D["Detalhes da carona"]
+    O -- "publicar" --> D
+    M --> D
+    D --> S["Solicitar vaga<br/>(passageiro)"]
+    D --> A["Aceitar / recusar pedidos<br/>(motorista)"]
+    A --> CO["Concluir viagem"]
+    CO --> AV["Avaliação mútua"]
+    S --> AV
+    D --> DN["Denunciar<br/>(página própria)"]
+    D --> PU["Perfil público<br/>do motorista"]

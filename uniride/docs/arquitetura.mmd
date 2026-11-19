@@ -1,0 +1,14 @@
+flowchart TB
+    subgraph C1["1. Front-end — React (roda no navegador · http://localhost:5173)"]
+        direction LR
+        U["👤 Aluno, professor<br/>ou funcionário"] --- B["Navegador web<br/>(computador ou celular)"] --- F["Aplicação React<br/>páginas · componentes<br/>React Router · useState/useEffect"]
+    end
+    subgraph C2["2. Back-end — API em PHP 8 no Apache (XAMPP)"]
+        direction LR
+        P["backend/api/<br/>auth · caronas · veiculos<br/>usuarios · denuncias"] --- I["config/api.php<br/>regras de negócio: rateio,<br/>e-mail institucional, vagas"] --- S["Sessão PHP<br/>(login)"]
+    end
+    subgraph C3["3. Banco de dados"]
+        D[("MySQL / MariaDB<br/>banco uniride · 6 tabelas")]
+    end
+    C1 <-- "fetch(): requisições HTTP com dados em JSON (GET/POST)" --> C2
+    C2 <-- "PDO com prepared statements (config/conexao.php)" --> C3
