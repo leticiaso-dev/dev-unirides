@@ -13,13 +13,23 @@ https://github.com/leticiaso-dev/dev-unirides/tree/main/UniRide_telas/UniRide_te
 
 ## </> Código Front-End
 O código front-end foi desenvolvido em react native e também em html. Seguem as pastas para acesso:
+
 📁React Native: https://github.com/leticiaso-dev/dev-unirides/blob/main/uniride/frontend/package-lock.json
+
 📁HTML: https://github.com/leticiaso-dev/dev-unirides/blob/main/unirides_html
 
 
 ## </> Código Back-End
+O código back-end foi desenvolvido em PHP e pode ser acessado pela seguinte pasta:
+
+📁PHP: https://github.com/leticiaso-dev/dev-unirides/tree/main/uniride/backend
 
 ## 🗄️ Banco de Dados
+A parte de banco de dados foi desenvolvida em SQL. Segue a pasta para acesso:
+
+📁SQL: https://github.com/leticiaso-dev/dev-unirides/tree/main/uniride/database
+
+
 ##  Equipe de desenvolvimento
 
 | Nome | Função |
