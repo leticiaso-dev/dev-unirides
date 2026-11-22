@@ -36,7 +36,7 @@ A parte de banco de dados foi desenvolvida em SQL. Segue a pasta para acesso:
 |------|--------|
 | André Silva | Protótipo Figma e banco SQL |
 | Leonardo  |  |
-| Leticia Sá Oliveira | Protótipo e código HTML |
+| Leticia Sá Oliveira | Protótipo Miro, código HTML e documentação|
 | Lucas | |
 | Lucas Santos | |
 | Thamires | |
