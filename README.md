@@ -39,7 +39,7 @@ A parte de banco de dados foi desenvolvida em SQL. Segue a pasta para acesso:
 | Leticia Sá Oliveira | Protótipo Miro, código HTML e documentação|
 | Lucas | |
 | Lucas Santos | |
-| Thamires | |
+| Thamires | Revisão ABNT |
 
 ## Conclusão
 O protótipo desenvolvido pelo Figma permitiu visualizar a experiência do usuário e identificar melhorias. Além disso, foi possível alinhar as funcionalidades com o time de desenvolvimento mobile.
