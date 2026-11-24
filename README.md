@@ -34,11 +34,11 @@ A parte de banco de dados foi desenvolvida em SQL. Segue a pasta para acesso:
 
 | Nome | Função |
 |------|--------|
-| André Silva | Protótipo Figma, banco SQL, documentação |
-| Leonardo  | Documentação |
+| André Silva | React, Protótipo Figma, banco SQL, documentação |
+| Leonardo  | PHP, Documentação |
 | Leticia Sá Oliveira | Protótipo Miro, código HTML e documentação|
-| Lucas | |
-| Lucas Santos | |
+| Lucas | React, Documentação |
+| Lucas Santos | PHP, Documentação |
 | Thamires | Revisão ABNT, Git e GitHub |
 
 ## Conclusão
